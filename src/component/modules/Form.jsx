@@ -42,7 +42,7 @@ const FormChuc = () => {
   const onFinish = (value) => {
     setArray([value,...array])
   };
-  console.log(array);
+
   return (
     <>
       <div className="row">
