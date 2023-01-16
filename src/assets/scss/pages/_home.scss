@@ -1,0 +1,2383 @@
+.page-main {
+  .img-avatar {
+    max-height: 500px;
+  }
+
+  &-background {
+    position: relative;
+
+    .background {
+      background-image: url('../../images/IMG_0215.jpeg');
+    }
+
+    .hero-content-wrap {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .header-caption * {
+      color: #ff3333 !important;
+
+    }
+
+    .hero-content-wrap:before {
+      content: "";
+      background-color: rgba(255, 255, 255, 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .hero-area.zoom-burns {
+      overflow: hidden;
+      height: 100vh;
+      background: 0 0;
+
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 80px 0;
+
+    }
+
+    .zoom-burns-background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-animation: zoomburns 40s infinite;
+      animation: zoomburns 40s infinite;
+    }
+
+    @-webkit-keyframes zoomburns {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+
+      50% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+
+    @keyframes zoomburns {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+
+      50% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+
+    .header-caption-heading {
+      font-size: 45px;
+      line-height: 53px;
+      padding: 7px 0 3px;
+    }
+
+    .header-caption {
+      margin: auto;
+      width: 51%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      min-height: 100vh;
+    }
+
+    .header-content {
+      padding: 23px 0 0 0;
+      position: relative;
+    }
+
+    .header-inner-text {
+      position: absolute;
+      text-align: center;
+      z-index: 300;
+      width: 100%;
+      top: -500%;
+      color: white;
+      font-family: 'Playball', cursive;
+    }
+
+    .header-caption h6 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    .header-content h3 {
+      font-size: 30px;
+    }
+
+    .header-caption p {
+      font-size: 25px;
+    }
+
+    .header-content-float-img {
+      top: -80%;
+      height: auto;
+      width: 63% !important;
+      margin-left: 15%;
+    }
+
+    .background-time {
+      text-align: center;
+      color: white;
+    }
+  }
+
+  //introduction
+  .section-introduction {
+    @include pxRem(margin-top, 80);
+
+    .user-card {
+      @include pxRem(margin-bottom, 200);
+      display: flex;
+      position: relative;
+
+      &.user-card-reverse {
+        @include pxRem(margin-bottom, 50);
+        flex-direction: row-reverse;
+
+        .user-image {
+          margin-left: -10%;
+        }
+
+        .user-info {
+          align-self: flex-start;
+          margin: -4% 5% 0 0;
+        }
+
+        .flower-icon {
+          transform: translate(95%, -95%) scaleY(-1);
+          top: 100%;
+          right: 100%;
+        }
+      }
+    }
+
+    .flower-icon {
+      transform: translate(5%, -8%) rotate(-180deg) scaleY(-1);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 35%;
+      z-index: 0;
+    }
+
+    .user-image,
+    // .user-info {
+    //   @include clearfix();
+    // }
+
+    .user-image {
+      height: 100%;
+      z-index: 0;
+    }
+
+    .user-info {
+      @include pxRem(padding, 50);
+      // @include flex-centered();
+      flex-direction: column;
+      align-self: flex-end;
+      position: relative;
+      width: 50%;
+      height: auto;
+      margin: 0 0 -4% -5%;
+      border: 30px solid transparent;
+      font-family: 'Quicksand', sans-serif;
+      background-color: white;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgb(200, 157, 156);
+        width: 100%;
+        height: 100%;
+        visibility: visible;
+        z-index: -1;
+      }
+
+      &::before {
+        height: calc(100% - 30px);
+        position: absolute;
+        left: 8px;
+        top: 16px;
+      }
+
+      &::after {
+        width: calc(100% - 30px);
+        position: absolute;
+        left: 21px;
+        top: 0;
+      }
+
+      .user-name,
+      .user-role {
+        color: rgb(200, 157, 156);
+        text-align: center;
+      }
+
+      .user-name {
+        @include pxRem(font-size, 35);
+        @include pxRem(margin-bottom, 5);
+        line-height: 1;
+      }
+
+      .user-role {
+        @include pxRem(font-size, 20);
+        @include pxRem(margin-bottom, 20);
+        font-style: italic;
+      }
+
+      .user-desc {
+        color: #73777b;
+        @include pxRem(margin-bottom, 40);
+      }
+
+      .user-socials {
+
+        // @include flex-center-y();
+        justify-content: center
+      }
+
+      .user-social-item {
+        // @include flex-centered();
+        @include pxRem(width, 22);
+        @include pxRem(height, 22);
+        @include pxRem(border-radius, 3);
+        @include pxRem(margin, 0 3);
+        @include pxRem(font-size, 14);
+        color: white;
+        background-color: rgb(200, 157, 156);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .slick-img {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .slick-track {
+    width: 6444px;
+    left: -2148px;
+    opacity: 1;
+    transition: left 500ms ease 0s;
+  }
+
+  //banner-bg
+
+  .section-bg-banner {
+    background: url('../../images/camera1.jpeg') no-repeat;
+    padding: 120px 0;
+    position: relative;
+    background-size: cover !important;
+    color: #FFF;
+    background-position: center !important;
+    margin: 40px 0;
+    height: 323px;
+
+    &-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+      font-size: 28px;
+      z-index: 10;
+      width: 100%;
+      position: absolute;
+    }
+  }
+
+  .section-bg-banner::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  //story
+  .section-story {
+    position: relative;
+
+    .stories .story-item.story-first {
+      margin-top: 0;
+    }
+
+    .stories .story-item.story-final {
+      margin-bottom: 0;
+    }
+
+    .content-logo {
+      position: relative;
+
+      .bg-traitim {
+        height: 200%;
+        width: 31%;
+        position: absolute;
+        top: -43%;
+
+        &.traitim1 {
+          left: -33%;
+        }
+
+        &.traitim2 {
+          right: -33%;
+        }
+      }
+    }
+
+
+    .stories {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        @include pxRem(width, 1);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        background-color: rgb(200, 157, 156);
+        translate: 50% 0;
+        z-index: -1;
+      }
+
+      .story-item {
+        // @include flex-column-centered();
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 6.25rem;
+
+        .story-timeline {
+          max-width: 100%;
+        }
+      }
+
+      .story-all {
+        @include pxRem(margin-top, 120);
+        @include pxRem(padding, 20 10);
+        color: rgb(200, 157, 156);
+        background-color: #fff;
+        text-align: center;
+
+        .story-icon {
+          @include pxRem(font-size, 80);
+          line-height: 1;
+          color: rgb(200, 157, 156);
+        }
+
+        h2 {
+          @include pxRem(font-size, 70);
+          line-height: 1;
+          margin: 0;
+        }
+      }
+    }
+
+    .story-year {
+      // @include flex-centered();
+      @include pxRem(font-size, 32);
+      @include pxRem(padding, 8 0);
+      @include pxRem(margin-bottom, 70);
+      display: inline-flex;
+      position: relative;
+      color: rgb(200, 157, 156);
+      background-color: #fff;
+
+      .double-border {
+        @include pxRem(padding, 20 50);
+        background-color: #fff;
+      }
+    }
+
+    .timeline-item {
+      position: relative;
+
+      &::before,
+      &::after {
+        @include pxRem(width, 400);
+        @include pxRem(height, 375);
+        content: "";
+        position: absolute;
+        background-image: url("https://lnrsvp.netlify.app/static/media/flower-medium.437ffb8aa3837d8549ab.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &::before {
+        transform: translate(57%, -60%);
+        top: 40%;
+        left: 57%;
+        z-index: -1;
+      }
+
+      &::after {
+        transform: translate(50%, 20%);
+        top: 100%;
+        right: 50%;
+        rotate: 180deg;
+        z-index: -2;
+      }
+
+      &.timeline-flex {
+        display: flex;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          transform: translate(0, 100%);
+          top: 50%;
+          left: -50%;
+          scale: -1 1;
+          rotate: -90deg;
+        }
+      }
+
+      &.timeline-video {
+        &::before {
+          top: 30%;
+        }
+
+        &::after {
+          transform: translate(50%, -100%);
+          left: 5%;
+          bottom: 30%;
+          top: auto;
+          right: auto;
+        }
+
+        .timeline-date {
+          top: 22%;
+          left: 50%;
+        }
+
+        .timeline-images {
+          transform: translateY(150px);
+
+          .image-item {
+
+            &:nth-child(even) {
+              margin-top: 10%;
+              z-index: 2;
+            }
+
+            &:nth-child(odd) {
+              transform: translateY(-50%);
+              margin-top: 45%;
+            }
+          }
+        }
+
+        .timeline-story {
+          transform: translateX(-25%);
+          position: relative;
+          margin: -30% 0 0 50%;
+        }
+      }
+    }
+
+    .timeline-date {
+      @include pxRem(padding, 20 28);
+      @include pxRem(font-size, 22);
+      transform: translateY(-50%);
+      display: inline-flex;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      z-index: 1;
+      color: #fff;
+      border: 10px solid #fff;
+      background-color: rgb(200, 157, 156);
+
+      .double-border {
+
+        &::before,
+        &::after {
+          border-color: #fff;
+        }
+      }
+    }
+
+    .timeline-images {
+      display: flex;
+    }
+
+    .image-item {
+      // @include clearfix();
+      width: 50%;
+      border: 10px solid #fff;
+      float: left;
+      align-self: flex-start;
+
+      img {
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &:nth-child(odd) {
+        margin-left: 5%;
+      }
+
+      &:nth-child(even) {
+        @include pxRem(margin-top, 25%);
+        margin-left: -8%;
+      }
+    }
+
+    .timeline-story {
+      // @include clearfix();
+      @include pxRem(padding, 30 25);
+      position: relative;
+      max-width: 40%;
+      align-self: flex-start;
+      color: #fff;
+      border: 10px solid #fff;
+      background-color: rgb(200, 157, 156);
+      z-index: 4;
+      margin: -30% 0 0 14%;
+
+      .double-border {
+        @include pxRem(padding, 40 25);
+
+        &::before,
+        &::after {
+          border-color: rgb(200, 157, 156);
+        }
+      }
+
+      .title {
+        // @include flex-center-x();
+        @include pxRem(margin-bottom, 15);
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+      }
+
+      .underline-icon {
+        @include pxRem(margin-bottom, 20);
+        color: #fff;
+      }
+    }
+
+    .timeline-slider {
+      width: 65%;
+      position: relative;
+      z-index: 1;
+
+      &+.timeline-story {
+        @include pxRem(min-width, 400);
+        transform: translateX(100%);
+        margin: 30% 0 0 -50%;
+      }
+
+      .slick-slider {
+        border: 10px solid #fff;
+        z-index: -1;
+
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          max-height: 500px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .timeline-slider-actions {
+        // @include flex-centered();
+        transform: translate(0, -50%);
+        display: inline-flex;
+        position: absolute;
+        left: 0;
+        background-color: #fff;
+        border: 10px solid #fff;
+      }
+
+      .slick-arrow {
+        // @include flex-centered();
+        @include pxRem(font-size, 25);
+        @include pxRem(width, 38);
+        @include pxRem(height, 54);
+        color: #fff;
+        background-color: #fff;
+        border: 1px solid rgb(200, 157, 156);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        outline: none;
+
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+
+      .slick-prev {
+        z-index: 10;
+        left: -2%;
+        top: 100%;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f053";
+          color: rgb(200, 157, 156);
+          z-index: 11;
+        }
+      }
+
+      .slick-next {
+        z-index: 10;
+        left: 5%;
+        top: 100%;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f054";
+          color: rgb(200, 157, 156);
+        }
+      }
+    }
+
+    .slick-track {
+      left: 0
+    }
+
+    .player-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 60%;
+      border: 10px solid #fff;
+
+      video {
+        display: block;
+      }
+    }
+  }
+
+  .double-border {
+    @include pxRem(padding, 20);
+    position: relative;
+    flex-direction: column;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgb(200, 157, 156);
+    }
+
+    &::before {
+      @include pxRem(top, 8);
+      left: 0;
+      width: 100%;
+      height: calc(100% - 16px);
+    }
+
+    &::after {
+      @include pxRem(left, 8);
+      top: 0;
+      width: calc(100% - 16px);
+      height: 100%;
+    }
+
+    .content {
+      color: #fff;
+    }
+  }
+
+  //calendar
+  .invitation-section {
+    background-image: url("https://preview.iwedding.info/templates/template15/images/bg.png");
+
+    .invitation-box {
+      background: #fff;
+      max-width: 580px;
+      padding: 120px 70px;
+      -webkit-box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 3px 24px 0px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .invitation-section .calendar-box {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+
+  .invitation-section .calendar-box .mini_calendar {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E3E3E6;
+  }
+
+  .invitation-section .calendar-box table {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    border: none;
+  }
+
+  #today {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    padding: 5px;
+    background-color: rgb(200, 157, 156);
+    color: #fff;
+    border-radius: 50%;
+    margin-top: 5px;
+  }
+
+  .invitation-section .calendar-box table th {
+    text-align: center;
+    padding: 8px 0;
+    color: #484747;
+    border-top: 1px solid #CFCFD0;
+    border-bottom: 1px solid #CFCFD0;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+
+  .invitation-section .calendar-box .mini_calendar table tr:nth-child(2) td {
+    padding-top: 20px;
+    height: 60px;
+  }
+
+  .invitation-section .calendar-box .mini_calendar td {
+    font-size: 0.9em;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    color: #484747;
+  }
+
+  .invitation-section .calendar-box .mini_calendar .calendar-month {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #203447;
+  }
+
+  .invitation-section .calendar-box .mini_calendar td #today {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    padding: 5px;
+    background-color: rgb(200, 157, 156);
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  .invitation-section .invitation-box:before {
+    content: "";
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    border: 5px solid rgb(129 103 103 / 40%);
+  }
+
+  .invitation-section .invitation-box .inner {
+    position: relative;
+  }
+
+  .invitation-section .invitation-box .left-vec {
+    background: url("https://preview.iwedding.info/templates/template15/images/invitation-left-img.png") center center/cover no-repeat local;
+    width: 220px;
+    height: 414px;
+    position: absolute;
+    left: -150px;
+    top: -100px;
+    z-index: -1;
+  }
+
+  .invitation-section .invitation-box .right-vec {
+    background: url("https://preview.iwedding.info/templates/template15/images/invitation-right-image.png") center center/cover no-repeat local;
+    width: 400px;
+    height: 508px;
+    position: absolute;
+    right: -120px;
+    bottom: -100px;
+    z-index: -1;
+  }
+
+  .invitation-section .calendar-box .left-vec {
+    display: none;
+  }
+
+  .invitation-section .invitation-box.left .right-vec {
+    display: none;
+  }
+
+  @media (min-width: 992px) {}
+
+  .invitation-section .invitation-box h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    font-size: 3.33333rem;
+    margin: 0 0 0.6em;
+  }
+
+  .invitation-section .invitation-box h2+span {
+    font-size: 16px;
+    font-size: 1.06667rem;
+    font-weight: 300;
+    color: #797979;
+  }
+
+  .invitation-box {
+    height: 583px;
+  }
+
+  .invitation-section .invitation-box p {
+    font-size: 17px;
+    font-size: 1.13333rem;
+    margin-bottom: 2em;
+  }
+
+  .invitation-section .invitation-box h3 {
+    /*font-size: 32px;*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.83em 0 1em;
+  }
+
+
+}
+
+// coundown
+.section-banner-countdown {
+  width: 100%;
+  padding: 0 0;
+  display: inline-block;
+
+  .banner-countdown {
+    @include pxRem (width, 100%);
+    background-color: map-get($colors, color-background-red);
+    align-items: center;
+    color: map-get($colors, color-danger);
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+
+    p {
+      @include pxRem(font-size, 24);
+      @include pxRem(margin-right, 15);
+      font-weight: map-get($font-weight, font-regular);
+
+      span {
+        @include pxRem(letter-spacing, -2.001);
+        @include pxRem(margin-right, 2);
+      }
+    }
+
+    .bannercountdown-text {
+      font-weight: map-get($font-weight, font-bland);
+      color: map-get($colors, color-text-desc);
+      @include pxRem(margin-left, 15);
+      @include pxRem(font-size, 16);
+    }
+  }
+}
+
+.countdown-banner {
+  align-items: center;
+  justify-content: space-around;
+
+  .count-total {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .count-item {
+    display: flex;
+    @include pxRem(width, 42);
+    @include pxRem(height, 44);
+    background-color: map-get($colors, color-primary);
+    justify-content: center;
+    align-items: center;
+    font-weight: map-get($font-weight, normal);
+    padding: 33px;
+    font-family: "Great Vibes", cursive;
+    font-size: 4rem;
+    color: rgb(200, 157, 156);
+  }
+
+  span {
+    @include pxRem(margin-top, 5);
+    color: rgb(200, 157, 156);
+    font-family: "Great Vibes", cursive;
+    font-size: 2rem;
+  }
+
+}
+
+//test
+.section-bg {
+  background: url(https://cdn.biihappy.com/ziiweb/default/template/6174ee5134c46827c45a50e5/05377a05efd75334b07671ca8e80985e.jpg) no-repeat
+}
+
+.section {
+  padding: 20px 0;
+}
+
+
+.container-bg {
+  margin: 0;
+  max-width: 100%;
+}
+
+.user-social-item {
+  svg {
+    color: white;
+  }
+
+}
+
+/// heart down
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@-webkit-keyframes snowflakes-shake {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px)
+  }
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@keyframes snowflakes-shake {
+
+  0%,
+  100% {
+    transform: translateX(0)
+  }
+
+  50% {
+    transform: translateX(80px)
+  }
+}
+
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 15s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 15s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, .5s;
+  animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 10s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 20s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s
+}
+
+.snowflake:nth-of-type(10) {
+  left: 25%;
+  -webkit-animation-delay: 2s, 0s;
+  animation-delay: 2s, 0s
+}
+
+.snowflake:nth-of-type(11) {
+  left: 65%;
+  -webkit-animation-delay: 4s, 2.5s;
+  animation-delay: 4s, 2.5s
+}
+
+//repon slider
+.page-main {
+
+  @media (max-width: 1440px) {
+    .header-content-float-img {
+      left: 15px !important;
+      top: -590% !important;
+      width: 85% !important;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header-content-float-img {
+      left: 15px !important;
+      top: -425% !important;
+      width: 85% !important;
+    }
+  }
+
+
+  @media (max-width: 991px) {
+    body {
+      /*padding-top:50px;*/
+    }
+
+    #clock {
+      text-align: center;
+      margin-top: 165px;
+    }
+  }
+
+  @media (max-width:1366px) {
+    .parallax {
+      background-attachment: scroll
+    }
+  }
+
+  @media (max-width:767px) {
+    .container {
+      padding: 0 12px
+    }
+  }
+
+  @media (max-width:767px) {
+    .no-container {
+      margin: 0 -12px
+    }
+  }
+
+  @media (max-width:767px) {
+    .row {
+      margin: 0 -12px
+    }
+  }
+
+  @media (max-width:767px) {
+    .row>[class*=col-] {
+      padding: 0 12px
+    }
+  }
+
+  @media (min-width:768px) {
+    .col-md-1 {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%
+    }
+
+    .col-md-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%
+    }
+
+    .col-md-3 {
+      flex: 0 0 25%;
+      max-width: 25%
+    }
+
+    .col-md-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%
+    }
+
+    .col-md-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%
+    }
+
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+
+    .col-md-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%
+    }
+
+    .col-md-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%
+    }
+
+    .col-md-9 {
+      flex: 0 0 75%;
+      max-width: 75%
+    }
+
+    .col-md-10 {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%
+    }
+
+    .col-md-11 {
+      flex: 0 0 91.66667%;
+      max-width: 91.66667%
+    }
+
+    .col-md-12 {
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+
+  @media (min-width:960px) {
+    .col-wide-1 {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%
+    }
+
+    .col-wide-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%
+    }
+
+    .col-wide-3 {
+      flex: 0 0 25%;
+      max-width: 25%
+    }
+
+    .col-wide-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%
+    }
+
+    .col-wide-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%
+    }
+
+    .col-wide-6 {
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+
+    .col-wide-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%
+    }
+
+    .col-wide-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%
+    }
+
+    .col-wide-9 {
+      flex: 0 0 75%;
+      max-width: 75%
+    }
+
+    .col-wide-10 {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%
+    }
+
+    .col-wide-11 {
+      flex: 0 0 91.66667%;
+      max-width: 91.66667%
+    }
+
+    .col-wide-12 {
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+
+  @media (min-width:1024px) {
+    .col-lg-1 {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%
+    }
+
+    .col-lg-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%
+    }
+
+    .col-lg-3 {
+      flex: 0 0 25%;
+      max-width: 25%
+    }
+
+    .col-lg-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%
+    }
+
+    .col-lg-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%
+    }
+
+    .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+
+    .col-lg-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%
+    }
+
+    .col-lg-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%
+    }
+
+    .col-lg-9 {
+      flex: 0 0 75%;
+      max-width: 75%
+    }
+
+    .col-lg-10 {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%
+    }
+
+    .col-lg-11 {
+      flex: 0 0 91.66667%;
+      max-width: 91.66667%
+    }
+
+    .col-lg-12 {
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+
+  @media (min-width:1280px) {
+    .col-xl-1 {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%
+    }
+
+    .col-xl-2 {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%
+    }
+
+    .col-xl-3 {
+      flex: 0 0 25%;
+      max-width: 25%
+    }
+
+    .col-xl-4 {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%
+    }
+
+    .col-xl-5 {
+      flex: 0 0 41.66667%;
+      max-width: 41.66667%
+    }
+
+    .col-xl-6 {
+      flex: 0 0 50%;
+      max-width: 50%
+    }
+
+    .col-xl-7 {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%
+    }
+
+    .col-xl-8 {
+      flex: 0 0 66.66667%;
+      max-width: 66.66667%
+    }
+
+    .col-xl-9 {
+      flex: 0 0 75%;
+      max-width: 75%
+    }
+
+    .col-xl-10 {
+      flex: 0 0 83.33333%;
+      max-width: 83.33333%
+    }
+
+    .col-xl-11 {
+      flex: 0 0 91.66667%;
+      max-width: 91.66667%
+    }
+
+    .col-xl-12 {
+      flex: 0 0 100%;
+      max-width: 100%
+    }
+  }
+
+  @media (max-width:1024px) {
+    .wedding-info {
+      flex-direction: column-reverse;
+      font-size: 16px;
+      font-size: 1rem;
+      padding: 3.125rem 1.25rem
+    }
+
+    .wedding-info .wedding-address,
+    .wedding-info .wedding-contact {
+      text-align: center
+    }
+
+    .wedding-info .wedding-protagonist {
+      left: 0;
+      margin: 1.25rem 0 3.125rem;
+      position: relative;
+      -webkit-transform: none;
+      transform: none
+    }
+  }
+
+  @media (max-width:1366px) {
+    .section-landscape .section-content .title {
+      align-items: center;
+      display: flex;
+      flex-direction: column
+    }
+
+    .section-landscape .section-content .title span {
+      display: block;
+      font-size: 30px;
+      font-size: 1.875rem;
+      margin: .625rem 0 0;
+      text-align: center
+    }
+
+    .section-introduction .user-card.user-card-reverse .flower-icon {
+      left: 8%;
+      top: 25%;
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1)
+    }
+
+    .section-introduction .flower-icon {
+      -webkit-transform: translate(-22%, 25%) rotate(-180deg) scaleY(-1);
+      transform: translate(-22%, 25%) rotate(-180deg) scaleY(-1)
+    }
+
+    .section-introduction .user-info {
+      border-width: 1.5625rem;
+      padding: 1.875rem;
+      width: 40%
+    }
+
+    .section-introduction .user-info .user-name {
+      font-size: 30px;
+      font-size: 1.875rem
+    }
+
+    .section-introduction .user-info .user-role {
+      font-size: 16px;
+      font-size: 1rem;
+      margin-bottom: .9375rem
+    }
+
+    .section-introduction .user-info .user-desc {
+      font-size: 14px;
+      font-size: .875rem;
+      margin-bottom: 1.5625rem
+    }
+
+    .section-story .section-title {
+      padding: 7.5rem 0 9.375rem
+    }
+
+    .section-story .section-title .section-divider-top {
+      padding-top: 5rem
+    }
+
+    .section-story .section-title .section-divider-top:before {
+      border-width: 60px 105vw 0 0
+    }
+
+    .section-story .section-title .section-divider-top {
+      padding-bottom: 5rem
+    }
+
+    .section-story .section-title .section-divider-top:after {
+      border-width: 60px 0 0 105vw
+    }
+
+    .section-story .story-item {
+      margin-bottom: 5rem
+    }
+
+    .section-story .timeline-item:after,
+    .section-story .timeline-item:before {
+      height: 280px;
+      height: 17.5rem;
+      width: 300px;
+      width: 18.75rem
+    }
+
+    .section-story .timeline-item:before {
+      left: 44%;
+      top: 28%;
+      -webkit-transform: translate(50%, -65%);
+      transform: translate(50%, -65%)
+    }
+
+    .section-story .timeline-item:after {
+      display: none
+    }
+
+    .section-story .timeline-item.timeline-flex {
+      flex-direction: column
+    }
+
+    .section-story .timeline-item.timeline-flex:after {
+      bottom: -13%;
+      left: 0;
+      -webkit-transform: translateY(25%);
+      transform: translateY(25%)
+    }
+
+    .section-story .timeline-item.timeline-video:before {
+      right: 0;
+      top: 15%;
+      -webkit-transform: translate(60%, -25%);
+      transform: translate(60%, -25%)
+    }
+
+    .section-story .timeline-item.timeline-video .player-container {
+      position: static;
+      z-index: 1
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-date {
+      top: 20%;
+      -webkit-transform: translateX(15%);
+      transform: translateX(15%)
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-images {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+      z-index: 0
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-images .image-item:nth-child(odd) {
+      margin-top: 40%
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-images .image-item:nth-child(2n) {
+      margin-top: 0
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-story {
+      margin: -35% 0 0 50%;
+      -webkit-transform: translateX(-16%);
+      transform: translateX(-16%)
+    }
+
+    .section-story .timeline-date {
+      left: 52%;
+      top: 30%
+    }
+
+    .section-story .image-item {
+      width: 100%
+    }
+
+    .section-story .timeline-slider {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: calc(100vw - 50px)
+    }
+
+    .section-story .timeline-slider+.timeline-story {
+      align-self: flex-end;
+      margin: 0;
+      -webkit-transform: translate(-35%);
+      transform: translate(-35%)
+    }
+
+    .section-story .timeline-slider .timeline-slider-actions {
+      left: 10px;
+      left: .625rem
+    }
+
+    .section-story .timeline-story {
+      margin: -20% 0 0 5%;
+      max-width: 60%;
+      translate: none;
+      width: 100%
+    }
+
+    .section-invitation {
+      padding: 4.375rem 0
+    }
+
+    .section-invitation .wedding-invitation-cover {
+      padding: 12.5rem 0
+    }
+
+    .section-invitation .wedding-invitation-cover h2 {
+      font-size: 80px;
+      font-size: 5rem
+    }
+
+    .section-invitation .wedding-invitation-cover h2:after,
+    .section-invitation .wedding-invitation-cover h2:before {
+      height: 130px;
+      height: 8.125rem;
+      width: 150px;
+      width: 9.375rem
+    }
+
+    .section-invitation .wedding-invitation-cover h2 p {
+      font-size: 16px;
+      font-size: 1rem;
+      padding: .9375rem 0 0
+    }
+
+    .section-invitation .wedding-invitation-content .tagline {
+      font-size: 18px;
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime {
+      margin-bottom: 2.5rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime:after,
+    .section-invitation .wedding-invitation-content .wedding-datetime:before {
+      height: 20px;
+      height: 1.25rem;
+      width: 150px;
+      width: 9.375rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime .date {
+      font-size: 26px;
+      font-size: 1.625rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime .time {
+      font-size: 22px;
+      font-size: 1.375rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-place {
+      font-size: 16px;
+      font-size: 1rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-place .restaurant-name {
+      font-size: 18px;
+      font-size: 1.125rem
+    }
+
+    .section-location .google-map {
+      height: 400px;
+      height: 25rem
+    }
+  }
+
+  @media (max-width:1024px) {
+    .section-introduction .user-card.user-card-reverse .flower-icon {
+      left: 3%;
+      top: 36%;
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1)
+    }
+
+    .section-introduction .flower-icon {
+      -webkit-transform: translate(-8%, 8%) rotate(-180deg) scaleY(-1);
+      transform: translate(-8%, 8%) rotate(-180deg) scaleY(-1)
+    }
+
+    .section-introduction .user-info {
+      width: 45%
+    }
+
+    .section-story .timeline-date {
+      top: 25%
+    }
+
+    .section-story .timeline-item:before {
+      left: 42%
+    }
+  }
+
+  @media (max-width:959px) {
+    .section-landscape {
+      margin-bottom: 0
+    }
+
+    .section-introduction .user-card {
+      margin-bottom: 7.5rem
+    }
+
+    .section-introduction .user-card:last-child {
+      margin-bottom: 0
+    }
+
+    .section-introduction .user-info {
+      width: 60%
+    }
+
+    .section-introduction .flower-icon,
+    .section-story .timeline-item:after,
+    .section-story .timeline-item:before {
+      display: none
+    }
+  }
+
+  @media (max-width:767px) {
+    .section-title .title {
+      font-size: 38px;
+      font-size: 2.375rem;
+      margin: 1.875rem 0
+    }
+
+    .section-landscape {
+      // background-image: url(/static/media/invitation-background.13905f3fcbacd08352c5.jpeg);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      max-height: 100vh;
+      padding: 0 1.25rem
+    }
+
+    .section-landscape:before {
+      background-color: rgba(47, 54, 64, .75)
+    }
+
+    .section-landscape:after {
+      border-width: 0 0 50px 100vw
+    }
+
+    .section-landscape .video-landscape {
+      display: none
+    }
+
+    .section-landscape .section-content .wedding-main {
+      margin-bottom: 1.25rem
+    }
+
+    .section-landscape .section-content .title {
+      font-size: 50px;
+      font-size: 3.125rem;
+      padding: 1.875rem .625rem
+    }
+
+    .section-landscape .section-content .title span {
+      display: block;
+      font-size: 20px;
+      font-size: 1.25rem;
+      margin: .625rem 0 0;
+      text-align: center
+    }
+
+    .section-landscape .section-content .tagline {
+      font-size: 18px;
+      font-size: 1.125rem;
+      margin-bottom: 1.25rem
+    }
+
+    .section-landscape .section-content .countdown-timer span {
+      min-width: 60px;
+      min-width: 3.75rem
+    }
+
+    .section-landscape .section-content .countdown-timer span p {
+      padding: .3125rem .9375rem
+    }
+
+    .section-landscape .section-content .countdown-timer span p:first-child {
+      font-size: 40px;
+      font-size: 2.5rem
+    }
+
+    .section-introduction .user-card {
+      flex-direction: column;
+      margin-bottom: 3.125rem
+    }
+
+    .section-introduction .user-card.user-card-reverse {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 0
+    }
+
+    .section-introduction .user-card.user-card-reverse .user-image {
+      margin: 0
+    }
+
+    .section-introduction .user-card.user-card-reverse .user-info {
+      align-self: center;
+      margin: 0
+    }
+
+    .section-introduction .flower-icon {
+      display: none
+    }
+
+    .section-introduction .user-info {
+      border-width: 1.25rem;
+      margin: 0 auto;
+      padding: 1.875rem;
+      position: static;
+      -webkit-transform: translateY(-30px) !important;
+      transform: translateY(-30px) !important;
+      width: 95% !important
+    }
+
+    .section-introduction .user-info .user-name {
+      font-size: 28px;
+      font-size: 1.75rem
+    }
+
+    .section-introduction .user-info .user-role {
+      font-size: 16px;
+      font-size: 1rem
+    }
+
+    .section-introduction .user-info .user-desc {
+      font-size: 14px;
+      font-size: .875rem;
+      margin-bottom: 1.25rem
+    }
+
+    .section-introduction .user-image,
+    .section-introduction .user-info {
+      width: 100%
+    }
+
+    .section-story .section-title {
+      margin-bottom: 1.875rem;
+      padding: 1.875rem 0
+    }
+
+    .section-story .section-title .section-divider-top {
+      height: 0;
+      padding-top: 1.875rem
+    }
+
+    .section-story .section-title .section-divider-top:before {
+      border-width: 40px 100vw 0 0
+    }
+
+    .section-story .section-title .section-divider-bottom {
+      height: 0;
+      padding-bottom: 1.875rem
+    }
+
+    .section-story .section-title .section-divider-bottom:before {
+      border-width: 40px 0 0 100vw
+    }
+
+    .section-story .section-title .title {
+      margin: 3.125rem 0 2.1875rem
+    }
+
+    .section-story .story-year {
+      font-size: 22px;
+      font-size: 1.375rem;
+      margin-bottom: 2.5rem
+    }
+
+    .section-story .timeline-item:after,
+    .section-story .timeline-item:before {
+      display: none
+    }
+
+    .section-story .timeline-item:before {
+      right: -10%;
+      top: -50px
+    }
+
+    .section-story .timeline-item:after {
+      display: none
+    }
+
+    .section-story .timeline-item.timeline-flex {
+      align-items: center;
+      display: flex;
+      flex-direction: column
+    }
+
+    .section-story .timeline-item.timeline-video {
+      margin-bottom: 0
+    }
+
+    .section-story .timeline-item.timeline-video:before {
+      display: none
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-date {
+      left: auto;
+      right: 5px;
+      right: .3125rem;
+      top: -30px;
+      top: -1.875rem;
+      -webkit-transform: none;
+      transform: none
+    }
+
+    .section-story .timeline-item.timeline-video .timeline-story {
+      margin: -32% 0 0;
+      -webkit-transform: none;
+      transform: none
+    }
+
+    .section-story .timeline-date {
+      border-width: .3125rem;
+      font-size: 15px;
+      font-size: .9375rem;
+      left: auto;
+      padding: .625rem .75rem;
+      right: 15%
+    }
+
+    .section-story .timeline-date .double-border {
+      padding: .875rem 1.25rem .75rem;
+      white-space: nowrap;
+      width: 100%
+    }
+
+    .section-story .timeline-date .double-border:before {
+      height: calc(100% - 12px);
+      top: 6px;
+      top: .375rem
+    }
+
+    .section-story .timeline-date .double-border:after {
+      left: 6px;
+      left: .375rem;
+      width: calc(100% - 12px)
+    }
+
+    .section-story .timeline-images .image-item {
+      z-index: -1
+    }
+
+    .section-story .timeline-images .image-item:nth-child(odd) {
+      margin: 0
+    }
+
+    .section-story .timeline-story {
+      margin: -10px 0 0;
+      max-width: 100%
+    }
+
+    .section-story .timeline-story .title {
+      font-size: 18px;
+      font-size: 1.125rem
+    }
+
+    .section-story .timeline-story .content {
+      font-size: 14px;
+      font-size: .875rem
+    }
+
+    .section-story .timeline-slider {
+      margin-bottom: 1.875rem;
+      width: 100%
+    }
+
+    .section-story .timeline-slider+.timeline-story {
+      min-width: auto;
+      -webkit-transform: none;
+      transform: none
+    }
+
+    .section-story .timeline-slider .timeline-slider-actions {
+      border-width: .3125rem;
+      left: 10px;
+      left: .625rem
+    }
+
+    .section-story .timeline-slider .timeline-slider-actions .timeline-slider-button {
+      height: 40px;
+      height: 2.5rem
+    }
+
+    .section-story .player-container {
+      left: 10px;
+      left: .625rem;
+      width: 350px;
+      width: 21.875rem
+    }
+
+    .section-story .stories .story-item {
+      margin-bottom: 5rem
+    }
+
+    .section-story .stories .story-final {
+      margin-top: 0;
+      padding: .625rem 0 0
+    }
+
+    .section-story .stories .story-final .story-icon {
+      font-size: 50px;
+      font-size: 3.125rem
+    }
+
+    .section-story .stories .story-final h4 {
+      font-size: 20px;
+      font-size: 1.25rem
+    }
+
+    .section-story .stories .story-final h2 {
+      font-size: 40px;
+      font-size: 2.5rem
+    }
+
+    .section-invitation {
+      padding: 4.375rem 0
+    }
+
+    .section-invitation .double-border {
+      padding: 1.25rem
+    }
+
+    .section-invitation .section-divider-top {
+      height: 0;
+      padding-top: 3.75rem
+    }
+
+    .section-invitation .section-divider-top:before {
+      border-width: 60px 100vw 0 0
+    }
+
+    .section-invitation .section-divider-bottom {
+      height: 0;
+      padding-bottom: 3.75rem
+    }
+
+    .section-invitation .section-divider-bottom:after {
+      border-width: 0 0 60px 100vw
+    }
+
+    .section-invitation .section-title .title {
+      margin: 2.5rem 0
+    }
+
+    .section-invitation .section-content {
+      margin-bottom: 5rem
+    }
+
+    .section-invitation .left-side {
+      margin-bottom: 1.25rem
+    }
+
+    .section-invitation .wedding-invitation-cover {
+      padding: 6.25rem 0
+    }
+
+    .section-invitation .wedding-invitation-cover h2 {
+      font-size: 50px;
+      font-size: 3.125rem;
+      margin: 0
+    }
+
+    .section-invitation .wedding-invitation-cover h2:after,
+    .section-invitation .wedding-invitation-cover h2:before {
+      height: 80px;
+      height: 5rem;
+      width: 100px;
+      width: 6.25rem
+    }
+
+    .section-invitation .wedding-invitation-cover h2 p {
+      font-size: 12px;
+      font-size: .75rem;
+      padding: .625rem 0 .5rem
+    }
+
+    .section-invitation .wedding-invitation-content {
+      padding: 1.875rem 0
+    }
+
+    .section-invitation .wedding-invitation-content .tagline {
+      font-size: 16px;
+      font-size: 1rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime {
+      padding: 2.1875rem 0
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime .date {
+      font-size: 22px;
+      font-size: 1.375rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-datetime .time {
+      font-size: 20px;
+      font-size: 1.25rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-place {
+      font-size: 15px;
+      font-size: .9375rem
+    }
+
+    .section-invitation .wedding-invitation-content .wedding-place .restaurant-name {
+      font-size: 18px;
+      font-size: 1.125rem
+    }
+
+    .section-location .section-title .title {
+      margin: 3.125rem 0
+    }
+
+    .section-location .google-map {
+      height: 350px;
+      height: 21.875rem
+    }
+  }
+}
+
+//repon calendar
+.page-main {
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box {
+      max-width: 500px;
+      margin: 50px auto;
+    }
+
+    // .section-banner-countdown{
+    //   left: 19%;
+    // }
+  }
+
+  @media (max-width: 767px) {
+    .invitation-section .invitation-box {
+      /*max-width: 300px;*/
+      padding: 50px 40px;
+      margin: 50px auto;
+    }
+
+    .invitation-section .invitation-box.left {
+      margin-top: 0;
+      display: flex;
+      .inner{   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+          font-size: 4rem;
+        }
+        h3{
+          font-size: 2rem;
+        }
+        p{
+          font-size: 1.5rem;
+        }
+        a{
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .invitation-section .invitation-box.calendar-box {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .invitation-section .invitation-box:before {
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      border: 3px solid rgb(129 103 103 / 70%);
+    }
+    .section-story .stories .story-all h2{
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box .left-vec {
+      width: 150px;
+      height: 281px;
+      position: absolute;
+      left: -80px;
+      top: -80px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box .right-vec {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box h2 {
+      font-size: 40px;
+      font-size: 2.66667rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .row>.invitation-section {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .invitation-section {
+      width: 100%;
+
+      .invitation-section .calendar-box .mini_calendar td {
+        font-size: 2.6em;
+      }
+
+      .invitation-section .calendar-box .mini_calendar th {
+        font-size: 1.9em;
+      }
+
+      .calendar-box .mini_calendar .calendar-month {
+        font-size: 1.9em;
+      }
+    }
+
+    #today {
+      width: 40px;
+      height: 40px;
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .invitation-section .invitation-box {
+      &.left{
+        display: flex;
+      }
+      h2 {
+        font-size: 28px;
+        font-size: 1.86667rem;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .invitation-section .invitation-box h2+span {
+      font-size: 14px;
+      font-size: 0.93333rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box h3 {
+      font-size: 24px;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .invitation-section .invitation-box h3 {
+      font-size: 18px;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .invitation-section .invitation-box p {
+      font-size: 13px;
+      font-size: 0.86667rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .invitation-section .invitation-box p {
+      font-size: 12px;
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 520px) {
+    .page-main-background .header-caption {
+      width: 100%;
+    }
+    .section-story .stories .story-all h2{
+      font-size: 2rem;
+    }
+    .section-story .timeline-date{
+      right: 19%;
+      top: 18%;
+    }
+    .section-story .timeline-slider .slick-slider img {
+      max-height: 311px;
+    }
+    .invitation-section {
+      width: 100%;
+
+      .invitation-section .calendar-box .mini_calendar td {
+        font-size: 1.5em;
+      }
+
+      .invitation-section .calendar-box .mini_calendar th {
+        font-size: 1.3em;
+      }
+
+      .calendar-box .mini_calendar .calendar-month {
+        font-size: 1.3em;
+      }
+    }
+
+    #today {
+      width: 30px;
+      height: 30px;
+      font-size: 1.5em;
+      margin-left: 7px;
+    }
+  }
+  @media (max-width: 420px) {
+
+    .section-story .timeline-slider .slick-slider img {
+      max-height: 247px;
+    }
+    .section-story .timeline-slider .slick-next{
+      left: 9%;
+    }
+    .section-story .timeline-date{
+      right: 12%;
+      top: 15%;
+    }
+  }
+}
