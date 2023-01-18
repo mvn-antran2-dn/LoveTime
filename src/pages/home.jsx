@@ -2,8 +2,13 @@ import React from 'react'
 import Countdown from './coundown'
 import Slider from "react-slick";
 import FormChuc from '../component/modules/Form';
+import { Button, Modal } from 'antd';
+import { useState } from 'react';
+import IconMusic from '../assets/images/music';
+import Music from '../component/modules/music';
 
 export default function Home() {
+  
   const images = {
     bgTraitim: require('../assets/images/logo-an&linh.png'),
     linh: require('../assets/images/Linh.jpg'),
@@ -18,7 +23,7 @@ export default function Home() {
     n20231: require('../assets/images/tet-ngang.jpg'),
     n20232: require('../assets/images/tet-dung.jpg'),
     n20233: require('../assets/images/damcuoi.jpeg'),
-
+    ido: require('../assets/images/IDo.mp3'),
   };
   const settings_categories = {
     infinite: true,
@@ -65,7 +70,16 @@ export default function Home() {
       src: `${images.slider4}`,
     },
   ];
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="page-main">
       <div className="heart">
@@ -76,6 +90,22 @@ export default function Home() {
           <div className="snowflake"><img src="	https://preview.iwedding.info/common/imgs/heart.png" alt="heart" /></div>
         </div>
       </div>
+      <Button type="primary" onClick={showModal} className="bii-player">
+        <IconMusic />
+      <p className="bii-player-text">Bấm vào đây để nghe nhạc</p>
+      </Button>
+      <Modal 
+      open={isModalOpen} 
+      onOk={handleOk} 
+      onCancel={handleCancel}
+      closable={false}
+      className="modal-music">
+        <Music />
+      </Modal>
+      {/* <audio controls className='audio'>
+        <source src="../assets/images/I Do - 911.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio> */}
       <section className="section page-main-background hero-area zoom-burns ">
         <div className="hero-content-wrap zoom-burns-background background" ></div>
         <div className="container-bg">
@@ -138,9 +168,9 @@ export default function Home() {
       <section className="section section-introduction">
         <div className="container">
           <div className="user-card aos-init aos-animate" data-aos="fade-right" data-aos-offset="300">
-            <div className="flower-icon">
+            {/* <div className="flower-icon">
               <img src="https://lnrsvp.netlify.app/static/media/flower.c1d96a861d71f5994479174deb668125.svg" alt="flower" />
-            </div>
+            </div> */}
             <div className="user-image">
               <img src={images.an} alt="avatar" className='img-avatar' />
             </div>
@@ -160,9 +190,9 @@ export default function Home() {
                 <li className="user-social-item">
                   <a href="/#" target="_blank" rel="noreferrer">
                     <svg stroke="currentColor" fill="currentColor" strokeWidth="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 3.538c-0.588 0.263-1.222 0.438-1.884 0.516 0.678-0.406 1.197-1.050 1.444-1.816-0.634 0.375-1.338 0.65-2.084 0.797-0.6-0.638-1.453-1.034-2.397-1.034-1.813 0-3.281 1.469-3.281 3.281 0 0.256 0.028 0.506 0.084 0.747-2.728-0.138-5.147-1.444-6.766-3.431-0.281 0.484-0.444 1.050-0.444 1.65 0 1.138 0.578 2.144 1.459 2.731-0.538-0.016-1.044-0.166-1.488-0.409 0 0.013 0 0.028 0 0.041 0 1.591 1.131 2.919 2.634 3.219-0.275 0.075-0.566 0.116-0.866 0.116-0.212 0-0.416-0.022-0.619-0.059 0.419 1.303 1.631 2.253 3.066 2.281-1.125 0.881-2.538 1.406-4.078 1.406-0.266 0-0.525-0.016-0.784-0.047 1.456 0.934 3.181 1.475 5.034 1.475 6.037 0 9.341-5.003 9.341-9.341 0-0.144-0.003-0.284-0.009-0.425 0.641-0.459 1.197-1.038 1.637-1.697z"></path></svg></a></li></ul></div></div><div className="user-card user-card-reverse aos-init aos-animate" data-aos="fade-left" data-aos-offset="300">
-            <div className="flower-icon">
+            {/* <div className="flower-icon">
               <img src="https://lnrsvp.netlify.app/static/media/flower.c1d96a861d71f5994479174deb668125.svg" alt="flower" />
-            </div>
+            </div> */}
             <div className="user-image">
               <img src={images.linh} alt="avatar" className='img-avatar' />
             </div>

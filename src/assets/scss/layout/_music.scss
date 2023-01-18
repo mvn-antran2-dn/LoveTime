@@ -1,0 +1,132 @@
+// App.scss
+.Music {
+  padding: 5px 0 100px;
+  background-image: linear-gradient(#efa1ac, #f8d0d5);
+  color: #101010;
+  text-align: center;
+  position: relative;
+}
+
+.Song-Thumbnail {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+  animation: music 7s linear infinite;
+}
+@media (max-width: 420px) {
+
+  .Song-Thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+  .Music .img-music {
+    top: 35%;
+    .song {
+      width: 15px;
+      height: 15px;
+      top: 34%;
+      left: 36%;
+    }
+  }
+}
+
+.img-music {
+  position: absolute;
+  z-index: 10;
+  top: 21%;
+  left: 8%;
+}
+
+.song {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  animation: music 7s linear infinite;
+  background-color: #fff;
+  position: absolute;
+  top: 41%;
+  left: 40%;
+}
+
+@keyframes music {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Song-Title {
+  text-transform: capitalize;
+  margin-bottom: 0;
+  text-align: left;
+  width: 65%;
+  margin-left: 37%;
+  font-size: 20px;
+}
+
+.Singer {
+  margin-top: 0;
+  font-size: 12px;
+  color: #333;
+  text-align: left;
+  width: 65%;
+  margin-left: 37%;
+}
+
+.Control-Button-Group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 30px 0 30px 90px;
+  position: absolute;
+  bottom: 3%;
+  >* {
+    cursor: pointer;
+  }
+}
+
+.singer-song {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  width: 90%;
+  margin-left: 5%;
+  opacity: 0.7;
+}
+
+.Prev-Button,
+.Next-Button {
+  width: 40px;
+}
+
+.Pause-Play-Button {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 44px;
+
+  svg {
+    height: 40px;
+    position: absolute;
+    bottom: 34%;
+  }
+}
+
+:where(.css-dev-only-do-not-override-sk7ap8).ant-modal .ant-modal-content {
+  background-image: linear-gradient(#ee9ca7, #ffdde1);
+}
+
+.css-wpz5lw-Slider {
+  width: 50%;
+  margin-left: 27%;
+}
+

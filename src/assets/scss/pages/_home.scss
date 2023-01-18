@@ -1,6 +1,64 @@
 .page-main {
+  .audio {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    top: 90%;
+    left: 10%;
+    border-radius: 50%;
+  }
+
+  .bii-player {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    top: 90%;
+    left: 5%;
+    background-color: #df4758;
+    border-radius: 50%;
+
+    .playerIcon {
+      cursor: pointer;
+      display: block;
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #df4758;
+      padding-top: 7px;
+      padding-left: 9px;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  .bii-player .bii-player-text {
+    visibility: hidden;
+    color: #fff;
+    position: absolute;
+    top: 27%;
+    left: 86%;
+    background-color: #d4442d;
+    padding: 0 10px;
+    border-radius: 10px;
+
+  }
+
+  .bii-player:hover {
+    .bii-player-text {
+      visibility: visible;
+    }
+  }
+
   .img-avatar {
     max-height: 500px;
+    width: 100%;
+    object-fit: cover;
   }
 
   &-background {
@@ -176,14 +234,14 @@
 
         .flower-icon {
           transform: translate(95%, -95%) scaleY(-1);
-          top: 100%;
-          right: 100%;
+          top: 104%;
+          right: 88%;
         }
       }
     }
 
     .flower-icon {
-      transform: translate(5%, -8%) rotate(-180deg) scaleY(-1);
+      transform: translate(-20%, -8%) rotate(-180deg) scaleY(-1);
       position: absolute;
       right: 0;
       top: 0;
@@ -434,7 +492,7 @@
         @include pxRem(height, 375);
         content: "";
         position: absolute;
-        background-image: url("https://lnrsvp.netlify.app/static/media/flower-medium.437ffb8aa3837d8549ab.svg");
+        // background-image: url("https://lnrsvp.netlify.app/static/media/flower-medium.437ffb8aa3837d8549ab.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -2165,7 +2223,6 @@
 
 //repon calendar
 .page-main {
-
   @media (max-width: 991px) {
     .invitation-section .invitation-box {
       max-width: 500px;
@@ -2187,20 +2244,25 @@
     .invitation-section .invitation-box.left {
       margin-top: 0;
       display: flex;
-      .inner{   
+
+      .inner {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        h2{
+
+        h2 {
           font-size: 4rem;
         }
-        h3{
+
+        h3 {
           font-size: 2rem;
         }
-        p{
+
+        p {
           font-size: 1.5rem;
         }
-        a{
+
+        a {
           font-size: 1.5rem;
         }
       }
@@ -2220,22 +2282,13 @@
       top: 20px;
       border: 3px solid rgb(129 103 103 / 70%);
     }
-    .section-story .stories .story-all h2{
+
+    .section-story .stories .story-all h2 {
       font-size: 3rem;
     }
   }
 
-  @media (max-width: 991px) {
-    .invitation-section .invitation-box .left-vec {
-      width: 150px;
-      height: 281px;
-      position: absolute;
-      left: -80px;
-      top: -80px;
-    }
-  }
-
-  @media (max-width: 991px) {
+  @media (max-width: 1024px) {
     .invitation-section .invitation-box .right-vec {
       display: none;
     }
@@ -2246,14 +2299,13 @@
       font-size: 40px;
       font-size: 2.66667rem;
     }
+
+    .invitation-section .invitation-box .right-vec {
+      display: none;
+    }
   }
 
   @media (max-width: 767px) {
-    .row>.invitation-section {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
 
     .invitation-section {
       width: 100%;
@@ -2281,9 +2333,10 @@
     }
 
     .invitation-section .invitation-box {
-      &.left{
+      &.left {
         display: flex;
       }
+
       h2 {
         font-size: 28px;
         font-size: 1.86667rem;
@@ -2317,6 +2370,10 @@
       font-size: 13px;
       font-size: 0.86667rem;
     }
+
+    .page-main-background .background {
+      background-image: url(../../images/bg-sm.jpg);
+    }
   }
 
   @media (max-width: 767px) {
@@ -2325,20 +2382,25 @@
       font-size: 0.8rem;
     }
   }
+
   @media (max-width: 520px) {
     .page-main-background .header-caption {
       width: 100%;
     }
-    .section-story .stories .story-all h2{
+
+    .section-story .stories .story-all h2 {
       font-size: 2rem;
     }
-    .section-story .timeline-date{
+
+    .section-story .timeline-date {
       right: 19%;
       top: 18%;
     }
+
     .section-story .timeline-slider .slick-slider img {
       max-height: 311px;
     }
+
     .invitation-section {
       width: 100%;
 
@@ -2362,15 +2424,18 @@
       margin-left: 7px;
     }
   }
+
   @media (max-width: 420px) {
 
     .section-story .timeline-slider .slick-slider img {
       max-height: 247px;
     }
-    .section-story .timeline-slider .slick-next{
+
+    .section-story .timeline-slider .slick-next {
       left: 9%;
     }
-    .section-story .timeline-date{
+
+    .section-story .timeline-date {
       right: 12%;
       top: 15%;
     }

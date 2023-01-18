@@ -15,11 +15,11 @@ const { TextArea } = Input;
 
 const TextFrom = [
   {
-    name: "Lưu Vĩnh Toàn",
+    name: "Huỳnh Thị Mỹ Phước",
     Text: "Chúc hai bạn trăm năm hạnh phúc"
   },
   {
-    name: "Tào Quang Trường",
+    name: "Đoàn Ngọc Thông",
     Text: "Chúc mừng hạnh phúc hai bạn. Chúc hai bạn bên nhau đầu bạc răng long nha <3"
   },
   {
@@ -27,7 +27,7 @@ const TextFrom = [
     Text: "Tui thành tâm chúc hai bạn thật nhiều hạnh phúc và sống đời vui vẻ cùng nhau mãi mãi!"
   },
   {
-    name: "Nguyễn Quốc Khánh",
+    name: "Nguyễn Thị Trúc Xinh",
     Text: "Chúc đôi trai tài gái sắc hạnh phúc trọn vẹn, luôn yêu thương nhau thật nhiều!"
   },
   {
@@ -72,6 +72,7 @@ const FormChuc = () => {
               </div>
             ))};
           </div>
+          <p>Note: Vì tránh để những lời không hay nên chúng tôi đã đóng chức năng này lại, mong mọi người thông cảm. Xin cảm ơn mọi người</p>
         </div>
       </div>
 
