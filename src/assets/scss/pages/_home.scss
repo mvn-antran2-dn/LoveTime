@@ -578,8 +578,8 @@
       transform: translateY(-50%);
       display: inline-flex;
       position: absolute;
-      top: 30%;
-      left: 50%;
+      top: 34%;
+      left: 49%;
       z-index: 1;
       color: #fff;
       border: 10px solid #fff;
@@ -653,6 +653,8 @@
       .underline-icon {
         @include pxRem(margin-bottom, 20);
         color: #fff;
+        display: flex;
+        justify-content: center;
       }
     }
 
@@ -709,7 +711,7 @@
 
       .slick-prev {
         z-index: 10;
-        left: -2%;
+        left: -0.5%;
         top: 100%;
 
         &::before {
@@ -2436,8 +2438,17 @@
     }
 
     .section-story .timeline-date {
-      right: 12%;
-      top: 15%;
+      right: 8%;
+      top: 13.5%;
+    }
+
+    .invitation-section .invitation-box.left .inner h3 {
+      font-size: 18px;
+      font-size: 1.6rem;
+    }
+
+    .invitation-section .invitation-box.left .inner p {
+      font-size: 1.2rem;
     }
   }
 }
