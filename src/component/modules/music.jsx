@@ -9,7 +9,7 @@ import sound1 from '../../assets/images/yeuem.mp3'
 
 const Music = () => {
   const images = {
-    an: require('../../assets/images/an4.jpg'),
+    an: require('../../assets/images/logo-an&linh.png'),
   };
   const audios = [
     {
