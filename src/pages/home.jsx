@@ -99,7 +99,9 @@ export default function Home() {
       onOk={handleOk} 
       onCancel={handleCancel}
       closable={false}
-      className="modal-music">
+      className="modal-music" 
+      footer={null}
+      >
         <Music />
       </Modal>
       {/* <audio controls className='audio'>
