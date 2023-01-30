@@ -24,7 +24,7 @@ export default function Home() {
     n20233: require('../assets/images/damcuoi.jpeg'),
     ido: require('../assets/images/IDo.mp3'),
     music: require('../assets/images/music-tt1.png'),
-    music1: require('../assets/images/music-tt2.png'),
+    music1: require('../assets/images/music3-tt.png'),
   };
   const settings_categories = {
     infinite: true,
