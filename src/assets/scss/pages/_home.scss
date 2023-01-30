@@ -9,15 +9,31 @@
     border-radius: 50%;
   }
 
+  img.image-music-btn {
+    width: 100%;
+    height: 100%;
+  }
+  img.image-music1-btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -79%;
+    left: 60%;
+    animation: musicchat 15s linear infinite;
+  }
+  
+
   .bii-player {
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 7%;
+    height: 19%;
     z-index: 100;
-    top: 90%;
-    left: 5%;
-    background-color: #df4758;
-    border-radius: 50%;
+    top: 75%;
+    left: 2%;
+    background-color: unset;
+    padding: 0;
+    border: unset;
+    box-shadow: unset;
 
     .playerIcon {
       cursor: pointer;
@@ -34,6 +50,9 @@
       padding-left: 9px;
       position: absolute;
       z-index: 2;
+    }
+    &:hover{
+      background-color: unset;
     }
   }
 
@@ -954,6 +973,25 @@
 
 }
 
+@keyframes musicchat{
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  40%{
+    display: block;
+    opacity: 1;
+  }
+  80%{
+    display: none;
+    opacity: 1;
+  }
+  100%{
+    display: none;
+    opacity: 0;
+  }
+}
+
 // coundown
 .section-banner-countdown {
   width: 100%;
@@ -992,6 +1030,7 @@
 .countdown-banner {
   align-items: center;
   justify-content: space-around;
+  width: 100%;
 
   .count-total {
     display: flex;
@@ -2223,8 +2262,13 @@
   }
 }
 
-//repon calendar
+//repon calendar && btn-music
 .page-main {
+  @media (max-width: 1200px) {
+    .bii-player {
+      width: 10%;
+    }
+  }
   @media (max-width: 991px) {
     .invitation-section .invitation-box {
       max-width: 500px;
@@ -2293,6 +2337,9 @@
   @media (max-width: 1024px) {
     .invitation-section .invitation-box .right-vec {
       display: none;
+    }
+    .bii-player {
+      width: 10%;
     }
   }
 
@@ -2376,12 +2423,18 @@
     .page-main-background .background {
       background-image: url(../../images/bg-sm.jpg);
     }
+    .bii-player {
+      width: 10%;
+    }
   }
 
   @media (max-width: 767px) {
     .invitation-section .invitation-box p {
       font-size: 12px;
       font-size: 0.8rem;
+    }
+    .bii-player {
+      height: 17%;
     }
   }
 
@@ -2449,6 +2502,11 @@
 
     .invitation-section .invitation-box.left .inner p {
       font-size: 1.2rem;
+    }
+    .bii-player {
+      width: 14%;
+      height: 14%;
+      top: 85%;
     }
   }
 }

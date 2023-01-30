@@ -21,7 +21,7 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
           <div className="banner-countdown flex">
             <div className="countdown-banner flex" >
               <div className="count-total ">
-                <div className="count-item">
+                <div className="count-item days">
                   <DateTimeDisplay value={days} isDanger={false} />
                 </div>
                 <span>Ngày</span>

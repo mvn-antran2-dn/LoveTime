@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import FormChuc from '../component/modules/Form';
 import { Button, Modal } from 'antd';
 import { useState } from 'react';
-import IconMusic from '../assets/images/music';
 import Music from '../component/modules/music';
 
 export default function Home() {
@@ -24,6 +23,8 @@ export default function Home() {
     n20232: require('../assets/images/tet-dung.jpg'),
     n20233: require('../assets/images/damcuoi.jpeg'),
     ido: require('../assets/images/IDo.mp3'),
+    music: require('../assets/images/music-tt1.png'),
+    music1: require('../assets/images/music-tt2.png'),
   };
   const settings_categories = {
     infinite: true,
@@ -91,8 +92,10 @@ export default function Home() {
         </div>
       </div>
       <Button type="primary" onClick={showModal} className="bii-player">
-        <IconMusic />
-      <p className="bii-player-text">Bấm vào đây để nghe nhạc</p>
+        {/* <IconMusic /> */}
+        <img src={images.music} alt="img-music" className="image-music-btn"/>
+        <img src={images.music1} alt="img-music" className="image-music1-btn"/>
+      {/* <p className="bii-player-text">Bấm vào đây để nghe nhạc</p> */}
       </Button>
       <Modal 
       open={isModalOpen} 
@@ -104,10 +107,6 @@ export default function Home() {
       >
         <Music />
       </Modal>
-      {/* <audio controls className='audio'>
-        <source src="../assets/images/I Do - 911.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio> */}
       <section className="section page-main-background hero-area zoom-burns ">
         <div className="hero-content-wrap zoom-burns-background background" ></div>
         <div className="container-bg">
