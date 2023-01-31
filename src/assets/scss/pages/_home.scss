@@ -26,7 +26,7 @@
   .bii-player {
     position: fixed;
     width: 7%;
-    height: 19%;
+    height: 18%;
     z-index: 100;
     top: 75%;
     left: 2%;
@@ -2482,6 +2482,11 @@
       font-size: 1.5em;
       margin-left: 7px;
     }
+    .bii-player {
+      width: 14%;
+      height: 14%;
+      top: 83%;
+    }
   }
 
   @media (max-width: 420px) {
@@ -2510,7 +2515,7 @@
     .bii-player {
       width: 14%;
       height: 14%;
-      top: 85%;
+      top: 83%;
     }
   }
 }
