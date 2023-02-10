@@ -4,7 +4,7 @@ import PrevIcon from "../../assets/Icons/PrevIcon";
 import NextIcon from "../../assets/Icons/NextIcon";
 import PauseIcon from "../../assets/Icons/PauseIcon";
 import PlayIcon from "../../assets/Icons/PlayIcon";
-import sound from '../../assets/images/IDo.mp3'
+import sound from '../../assets/images/EmDongYIDo-DucPhucx911.mp3'
 import sound1 from '../../assets/images/yeuem.mp3'
 
 const Music = () => {
@@ -15,7 +15,7 @@ const Music = () => {
     {
       src: sound,
       title: "I Do",
-      artist: "911",
+      artist: "911 X Đức Phúc",
     },
     {
       src: sound1,
