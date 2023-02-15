@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Form, Input, Modal } from 'antd';
+import { Button, Form, Input } from 'antd';
 import { db } from '../../firebase';
 import { toast } from "react-toastify";
-import { doc, deleteDoc } from "firebase/firestore";
 
 const MyFormItemContext = React.createContext([]);
 function toArr(str) {
