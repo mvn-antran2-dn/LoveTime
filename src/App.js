@@ -4,14 +4,20 @@ import Home from "./pages/home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "./component/layout/Footer/Footer";
+import "./firebase"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-  <>
-    <Home />
-    <Footer />
-    {/* <Test /> */}
-  </>
+    <>
+      <Home />
+      <Footer />
+      <ToastContainer
+        position="top-center"
+        autoClose={3000} />
+      {/* <Test /> */}
+    </>
   );
 }
 

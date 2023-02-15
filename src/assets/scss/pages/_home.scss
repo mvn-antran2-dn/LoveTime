@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
   }
+
   img.image-music1-btn {
     width: 100%;
     height: 95%;
@@ -21,12 +22,12 @@
     left: 60%;
     animation: musicchat 15s linear infinite;
   }
-  
+
 
   .bii-player {
     position: fixed;
-    width: 7%;
-    height: 18%;
+    width: 100px;
+    height: 150px;
     z-index: 100;
     top: 75%;
     left: 2%;
@@ -51,7 +52,8 @@
       position: absolute;
       z-index: 2;
     }
-    &:hover{
+
+    &:hover {
       background-color: unset;
     }
   }
@@ -973,24 +975,28 @@
 
 }
 
-@keyframes musicchat{
-  0%{
+@keyframes musicchat {
+  0% {
     display: none;
     opacity: 0;
   }
-  40%{
+
+  40% {
     display: block;
     opacity: 1;
   }
-  70%{
+
+  70% {
     display: none;
     opacity: 1;
   }
-  71%{
+
+  71% {
     display: none;
     opacity: 0;
   }
-  100%{
+
+  100% {
     display: none;
     opacity: 0;
   }
@@ -2268,11 +2274,6 @@
 
 //repon calendar && btn-music
 .page-main {
-  @media (max-width: 1200px) {
-    .bii-player {
-      width: 10%;
-    }
-  }
   @media (max-width: 991px) {
     .invitation-section .invitation-box {
       max-width: 500px;
@@ -2341,9 +2342,6 @@
   @media (max-width: 1024px) {
     .invitation-section .invitation-box .right-vec {
       display: none;
-    }
-    .bii-player {
-      width: 10%;
     }
   }
 
@@ -2427,18 +2425,12 @@
     .page-main-background .background {
       background-image: url(../../images/bg-sm.jpg);
     }
-    .bii-player {
-      width: 10%;
-    }
   }
 
   @media (max-width: 767px) {
     .invitation-section .invitation-box p {
       font-size: 12px;
       font-size: 0.8rem;
-    }
-    .bii-player {
-      height: 17%;
     }
   }
 
@@ -2482,9 +2474,10 @@
       font-size: 1.5em;
       margin-left: 7px;
     }
+
     .bii-player {
-      width: 16%;
-      height: 14%;
+      width: 60px;
+      height: 100px;
       top: 83%;
     }
   }
@@ -2512,10 +2505,15 @@
     .invitation-section .invitation-box.left .inner p {
       font-size: 1.2rem;
     }
+
     .bii-player {
-      width: 16%;
-      height: 14%;
+      width: 60px;
+      height: 100px;
       top: 83%;
     }
   }
+}
+
+.ant-modal-root .ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.05);
 }
